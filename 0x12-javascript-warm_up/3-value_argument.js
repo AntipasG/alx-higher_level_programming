@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-// Script that prints "JavaScript is amazing".
-
-if (process.argv[2]) {
-  console.log(process.argv[2]);
-} else {
+let argsLen = 0;
+process.argv.forEach((element) => { argsLen++; });
+if (argsLen === 2) {
   console.log('No argument');
+} else {
+  console.log(process.argv[2]);
 }
